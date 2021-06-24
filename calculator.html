@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+           body{
+               background-color: black;
+           }
+           .container{
+               width:30%;
+               padding: 10px;
+               background-image:linear-gradient( #181717,#000000);
+               height:100%;
+               margin:20px;
+               border-radius: 10px;
+               box-shadow: 0.5px 0.5px 4px 4px rgb(22, 22, 22);
+           }
+           .field{
+               
+               margin:20px;
+               height:120px;
+               margin-bottom: 20px;
+               background: #0f0f0f;
+              
+           }
+           .num{
+               display: inline-block;
+               width:7%;
+               margin:16px;
+               margin-bottom: 12px;
+               padding :15px;            
+              border-radius: 50%;
+              font-size:40px;
+              font-weight: bolder;
+              color:#fff;
+           }
+           .nums{
+            background:#030708;
+           }
+           #input{
+               color:#fff;
+               font-size: large;
+               width:90%;
+               height:40px;
+            background: #0f0f0f;
+               padding:10px;
+           }
+           #output{
+            color:#fff;
+            font-size: larger;
+               box-shadow: 5px solid black;
+               width:90%;
+               height:20px;
+            background: #0f0f0f;
+               padding:10px;
+           }
+           input[type=text]{
+               border: 5px solid  #0f0f0f;
+           }
+           input[type=number]{
+               border: 5px solid  #0f0f0f;
+           }
+           
+
+       </style>
+
+    </head>
+    <body>
+        <center>
+       <div class="container">
+           <div class="col">
+           <div class="main">
+               <div class="field">
+                    
+                        <input id="input" placeholder="input: " type="text">
+                        
+                        <input id="output" placeholder="ouput: " type="text">
+                    
+                    </div>
+               </div>
+               <div class="numbers">
+                <div class="four">
+                    <span class="col-2 num nums" onclick="input('+')">+</span>
+                    <span class="col-2 num nums" onclick="input('-')">-</span>
+                    <span class="col-2 num nums" onclick="input('*')">*</span>
+                    <span class="col-2 num nums" onclick="input('/')">/</span>
+                   </div>
+                   <div class="one">
+                      <span class="num" onclick="input('7')">7</span>
+                      <span class="num" onclick="input('8')">8</span>
+                      <span class="num" onclick="input('9')">9</span>
+                      <span class="num nums" onclick="input('0')">0</span>
+                   </div>
+                   <br>
+                   <div class="two">
+                    <span class="num" onclick="input('4')">4</span>
+                    <span class="num" onclick="input('5')">5</span>
+                    <span class="num" onclick="input('6')">6</span>
+                    <span class="num nums" onclick="input('.')">.</span>
+                   </div>
+                   <br>
+                   <div class="three">
+                    <span class="num" onclick="input('1')">1</span>
+                    <span class="num" onclick="input('2')">2</span>
+                    <span class="num" onclick="input('3')">3</span>
+                    <span class="num nums" style="background: linear-gradient( red,rgb(36, 2, 2));" onclick="solve()">=</span>
+                   </div>
+                   <br>
+                   
+               </div>
+           </div>
+           </div>
+       </div>
+</center>
+<script>
+    var a;
+    var b;
+    var c;
+    function input(x){
+        document.getElementById('input').value+=x;
+        for(let i=0;i<value.length;i++){
+            console.log(value);
+        }
+    
+    }
+    function solve(){
+        let x=document.getElementById('input').value;
+        let y=eval(x);
+        document.getElementById('output').value="= "+y;
+    }
+    
+</script>
+    </body>
+</html>
